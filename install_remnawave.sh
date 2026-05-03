@@ -194,9 +194,10 @@ error() {
 }
 
 check_os() {
-    if ! grep -q "bullseye" /etc/os-release && ! grep -q "bookworm" /etc/os-release && ! grep -q "jammy" /etc/os-release && ! grep -q "noble" /etc/os-release && ! grep -q "trixie" /etc/os-release; then
-        error "${LANG[ERROR_OS]}"
-    fi
+    #if ! grep -q "bullseye" /etc/os-release && ! grep -q "bookworm" /etc/os-release && ! grep -q "jammy" /etc/os-release && ! grep -q "noble" /etc/os-release && ! grep -q "trixie" /etc/os-release; then
+    #    error "${LANG[ERROR_OS]}"
+    #fi
+	return 0
 }
 
 check_root() {
